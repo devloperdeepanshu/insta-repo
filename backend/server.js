@@ -24,7 +24,7 @@ app.post('/api/register', async (req, res) => {
       res.status(500).json({ message: 'Server error', error: err.message });
     }
   }); 
-   app.get('x', async (req, res) => {
+   app.get('/all', async (req, res) => {
     try {
       const users = await User.find();
       res.status(200).json(users);
